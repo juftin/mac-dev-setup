@@ -1,0 +1,6 @@
+<application>
+  <component name="AppPyDocumentationSettings">
+    <option name="format" value="NUMPY" />
+    <option name="myDocStringFormat" value="NumPy" />
+  </component>
+</application>

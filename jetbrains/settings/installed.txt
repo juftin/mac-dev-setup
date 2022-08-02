@@ -1,0 +1,16 @@
+Docker
+Pythonid
+com.chrisrm.idea.MaterialThemeUI
+com.intellij.bigdatatools
+com.jetbrains.plugins.ini4idea
+com.koxudaxi.pydantic
+com.mallowigi
+izhangzhihao.rainbow.brackets
+mobi.hsz.idea.gitignore
+net.seesharpsoft.intellij.plugins.csv
+org.intellij.plugins.markdown
+org.jetbrains.plugins.rest
+org.sonarlint.idea
+ru.adelf.idea.dotenv
+ru.meanmail.plugin.requirements
+zielu.gittoolbox
