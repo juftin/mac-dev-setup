@@ -1,0 +1,489 @@
+<!doctype html>
+<html class="no-js" lang="en">
+  <head><meta charset="utf-8"/>
+    <meta name="viewport" content="width=device-width,initial-scale=1"/>
+    <meta name="color-scheme" content="light dark"><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+<link rel="index" title="Index" href="genindex.html" /><link rel="search" title="Search" href="search.html" /><link rel="next" title="IDE" href="jetbrains.html" /><link rel="prev" title="Version Control" href="git.html" />
+
+    <meta name="generator" content="sphinx-5.1.1, furo 2022.06.21"/>
+        <title>Developer Efficiency Apps - mac-dev-setup</title>
+      <link rel="stylesheet" type="text/css" href="_static/pygments.css" />
+    <link rel="stylesheet" type="text/css" href="_static/styles/furo.css?digest=40978830699223671f4072448e654b5958f38b89" />
+    <link rel="stylesheet" type="text/css" href="_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="_static/styles/furo-extensions.css?digest=30d1aed668e5c3a91c3e3bf6a60b675221979f0e" />
+    
+    
+
+
+<style>
+  body {
+    --color-code-background: #f8f8f8;
+  --color-code-foreground: black;
+  
+  }
+  @media not print {
+    body[data-theme="dark"] {
+      --color-code-background: #202020;
+  --color-code-foreground: #d0d0d0;
+  
+    }
+    @media (prefers-color-scheme: dark) {
+      body:not([data-theme="light"]) {
+        --color-code-background: #202020;
+  --color-code-foreground: #d0d0d0;
+  
+      }
+    }
+  }
+</style></head>
+  <body>
+    
+    <script>
+      document.body.dataset.theme = localStorage.getItem("theme") || "auto";
+    </script>
+    
+
+<svg xmlns="http://www.w3.org/2000/svg" style="display: none;">
+  <symbol id="svg-toc" viewBox="0 0 24 24">
+    <title>Contents</title>
+    <svg stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 1024 1024">
+      <path d="M408 442h480c4.4 0 8-3.6 8-8v-56c0-4.4-3.6-8-8-8H408c-4.4 0-8 3.6-8 8v56c0 4.4 3.6 8 8 8zm-8 204c0 4.4 3.6 8 8 8h480c4.4 0 8-3.6 8-8v-56c0-4.4-3.6-8-8-8H408c-4.4 0-8 3.6-8 8v56zm504-486H120c-4.4 0-8 3.6-8 8v56c0 4.4 3.6 8 8 8h784c4.4 0 8-3.6 8-8v-56c0-4.4-3.6-8-8-8zm0 632H120c-4.4 0-8 3.6-8 8v56c0 4.4 3.6 8 8 8h784c4.4 0 8-3.6 8-8v-56c0-4.4-3.6-8-8-8zM115.4 518.9L271.7 642c5.8 4.6 14.4.5 14.4-6.9V388.9c0-7.4-8.5-11.5-14.4-6.9L115.4 505.1a8.74 8.74 0 0 0 0 13.8z"/>
+    </svg>
+  </symbol>
+  <symbol id="svg-menu" viewBox="0 0 24 24">
+    <title>Menu</title>
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+      stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather-menu">
+      <line x1="3" y1="12" x2="21" y2="12"></line>
+      <line x1="3" y1="6" x2="21" y2="6"></line>
+      <line x1="3" y1="18" x2="21" y2="18"></line>
+    </svg>
+  </symbol>
+  <symbol id="svg-arrow-right" viewBox="0 0 24 24">
+    <title>Expand</title>
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+      stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather-chevron-right">
+      <polyline points="9 18 15 12 9 6"></polyline>
+    </svg>
+  </symbol>
+  <symbol id="svg-sun" viewBox="0 0 24 24">
+    <title>Light mode</title>
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+      stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" class="feather-sun">
+      <circle cx="12" cy="12" r="5"></circle>
+      <line x1="12" y1="1" x2="12" y2="3"></line>
+      <line x1="12" y1="21" x2="12" y2="23"></line>
+      <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+      <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+      <line x1="1" y1="12" x2="3" y2="12"></line>
+      <line x1="21" y1="12" x2="23" y2="12"></line>
+      <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+      <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+    </svg>
+  </symbol>
+  <symbol id="svg-moon" viewBox="0 0 24 24">
+    <title>Dark mode</title>
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+      stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" class="icon-tabler-moon">
+      <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+      <path d="M12 3c.132 0 .263 0 .393 0a7.5 7.5 0 0 0 7.92 12.446a9 9 0 1 1 -8.313 -12.454z" />
+    </svg>
+  </symbol>
+  <symbol id="svg-sun-half" viewBox="0 0 24 24">
+    <title>Auto light/dark mode</title>
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+      stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" class="icon-tabler-shadow">
+      <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+      <circle cx="12" cy="12" r="9" />
+      <path d="M13 12h5" />
+      <path d="M13 15h4" />
+      <path d="M13 18h1" />
+      <path d="M13 9h4" />
+      <path d="M13 6h1" />
+    </svg>
+  </symbol>
+</svg>
+
+<input type="checkbox" class="sidebar-toggle" name="__navigation" id="__navigation">
+<input type="checkbox" class="sidebar-toggle" name="__toc" id="__toc">
+<label class="overlay sidebar-overlay" for="__navigation">
+    <div class="visually-hidden">Hide navigation sidebar</div>
+</label>
+<label class="overlay toc-overlay" for="__toc">
+    <div class="visually-hidden">Hide table of contents sidebar</div>
+</label>
+
+
+
+<div class="page">
+    <header class="mobile-header">
+        <div class="header-left">
+            <label class="nav-overlay-icon" for="__navigation">
+                <div class="visually-hidden">Toggle site navigation sidebar</div>
+                <i class="icon"><svg><use href="#svg-menu"></use></svg></i>
+            </label>
+        </div>
+        <div class="header-center">
+            <a href="index.html"><div class="brand">mac-dev-setup</div></a>
+        </div>
+        <div class="header-right">
+            <div class="theme-toggle-container theme-toggle-header">
+                <button class="theme-toggle">
+                    <div class="visually-hidden">Toggle Light / Dark / Auto color theme</div>
+                    <svg class="theme-icon-when-auto"><use href="#svg-sun-half"></use></svg>
+                    <svg class="theme-icon-when-dark"><use href="#svg-moon"></use></svg>
+                    <svg class="theme-icon-when-light"><use href="#svg-sun"></use></svg>
+                </button>
+            </div>
+            <label class="toc-overlay-icon toc-header-icon" for="__toc">
+                <div class="visually-hidden">Toggle table of contents sidebar</div>
+                <i class="icon"><svg><use href="#svg-toc"></use></svg></i>
+            </label>
+        </div>
+    </header>
+    <aside class="sidebar-drawer">
+        <div class="sidebar-container">
+            
+            <div class="sidebar-sticky"><a class="sidebar-brand" href="index.html">
+  
+  
+  <span class="sidebar-brand-text">mac-dev-setup</span>
+  
+</a><form class="sidebar-search-container" method="get" action="search.html" role="search">
+  <input class="sidebar-search" placeholder=Search name="q" aria-label="Search">
+  <input type="hidden" name="check_keywords" value="yes">
+  <input type="hidden" name="area" value="default">
+</form>
+<div id="searchbox"></div><div class="sidebar-scroll"><div class="sidebar-tree">
+  <ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="startup.html">Initial Settings and Applications</a></li>
+<li class="toctree-l1"><a class="reference internal" href="terminal.html">Terminal Configuration</a></li>
+<li class="toctree-l1"><a class="reference internal" href="python.html">Python</a></li>
+<li class="toctree-l1"><a class="reference internal" href="git.html">Version Control</a></li>
+<li class="toctree-l1 current current-page"><a class="current reference internal" href="#">Developer Efficiency Apps</a></li>
+<li class="toctree-l1"><a class="reference internal" href="jetbrains.html">IDE</a></li>
+<li class="toctree-l1"><a class="reference internal" href="mac_settings.html">Mac Settings</a></li>
+<li class="toctree-l1"><a class="reference internal" href="productivity.html">Productivity Hacks</a></li>
+<li class="toctree-l1"><a class="reference internal" href="references.html">References</a></li>
+</ul>
+
+</div>
+</div>
+
+            </div>
+            
+        </div>
+    </aside>
+    <div class="main">
+        <div class="content">
+            <div class="article-container">
+                <a href="#" class="back-to-top muted-link">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                        <path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8v12z"></path>
+                    </svg>
+                    <span>Back to top</span>
+                </a>
+                <div class="content-icon-container">
+                    <div class="theme-toggle-container theme-toggle-content">
+                        <button class="theme-toggle">
+                            <div class="visually-hidden">Toggle Light / Dark / Auto color theme</div>
+                            <svg class="theme-icon-when-auto"><use href="#svg-sun-half"></use></svg>
+                            <svg class="theme-icon-when-dark"><use href="#svg-moon"></use></svg>
+                            <svg class="theme-icon-when-light"><use href="#svg-sun"></use></svg>
+                        </button>
+                    </div>
+                    <label class="toc-overlay-icon toc-content-icon" for="__toc">
+                        <div class="visually-hidden">Toggle table of contents sidebar</div>
+                        <i class="icon"><svg><use href="#svg-toc"></use></svg></i>
+                    </label>
+                </div>
+                <article role="main">
+                    <section class="tex2jax_ignore mathjax_ignore" id="developer-efficiency-apps">
+<h1>Developer Efficiency Apps<a class="headerlink" href="#developer-efficiency-apps" title="Permalink to this heading">#</a></h1>
+<section id="shiftit">
+<h2>ShiftIt<a class="headerlink" href="#shiftit" title="Permalink to this heading">#</a></h2>
+<p><a class="reference external" href="https://github.com/peterklijn/hammerspoon-shiftit">ShiftIt</a> is a tool to manage window positions using hotkeys. It’s no longer
+maintained but its key bindings have been ported over to an automation tool
+called <a class="reference external" href="https://github.com/Hammerspoon/hammerspoon">HammerSpoon</a>.</p>
+<div class="highlight-shell notranslate"><div class="highlight"><pre><span></span>brew install hammerspoon
+</pre></div>
+</div>
+<ul>
+<li><p>Download, unzip, and open the ShitIt Key Bindings for Hammerspoon
+<a class="reference external" href="https://github.com/peterklijn/hammerspoon-shiftit/raw/master/Spoons/ShiftIt.spoon.zip">https://github.com/peterklijn/hammerspoon-shiftit/raw/master/Spoons/ShiftIt.spoon.zip</a></p></li>
+<li><p>Click on the Hammerspoon menubar icon and click on ‘Open Config’. An init.lua file should now
+open in your editor of choice.</p></li>
+<li><p>Paste the following configuration in the init.lua file, save it and close it.</p>
+<div class="highlight-text notranslate"><div class="highlight"><pre><span></span>hs.loadSpoon(&quot;ShiftIt&quot;)
+spoon.ShiftIt:bindHotkeys({})
+</pre></div>
+</div>
+</li>
+</ul>
+<p><img alt="shiftit.gif" src="_images/shiftit.gif" /></p>
+<p><img alt="shiftit_commands.png" src="_images/shiftit_commands.png" /></p>
+</section>
+<section id="aws-cli">
+<h2>AWS CLI<a class="headerlink" href="#aws-cli" title="Permalink to this heading">#</a></h2>
+<p>Install <a class="reference external" href="https://docs.aws.amazon.com/cli/index.html">AWS CLI v2</a></p>
+<div class="highlight-shell notranslate"><div class="highlight"><pre><span></span>curl <span class="s2">&quot;https://awscli.amazonaws.com/AWSCLIV2.pkg&quot;</span> -o ~/Downloads/AWSCLIV2.pkg <span class="o">&amp;&amp;</span> open ~/Downloads/AWSCLIV2.pkg
+</pre></div>
+</div>
+<p><img alt="aws_cli.png" src="_images/aws_cli.png" /></p>
+</section>
+<section id="dunk">
+<h2>dunk<a class="headerlink" href="#dunk" title="Permalink to this heading">#</a></h2>
+<p>Install and use <a class="reference external" href="https://github.com/darrenburns/dunk">dunk</a> for git diffs</p>
+<p>Pipe your git diff output into dunk to make it prettier!</p>
+<div class="highlight-shell notranslate"><div class="highlight"><pre><span></span>pipx install dunk
+git config --global alias.dunk <span class="s1">&#39;!git diff | dunk | less -R&#39;</span>
+</pre></div>
+</div>
+<p><img alt="dunk.png" src="_images/dunk.png" /></p>
+</section>
+<section id="docker-desktop">
+<h2>Docker Desktop<a class="headerlink" href="#docker-desktop" title="Permalink to this heading">#</a></h2>
+<p>Install <a class="reference external" href="https://www.docker.com/products/docker-desktop/">Docker Desktop</a></p>
+<ul class="simple">
+<li><p><a class="reference external" href="https://docs.docker.com/desktop/install/mac-install/">https://docs.docker.com/desktop/install/mac-install/</a></p></li>
+<li><p>After Installation, grant Docker additional resources the Docker Desktop
+App Preferences</p></li>
+</ul>
+<p><img alt="img.png" src="_images/docker_desktop.png" /></p>
+</section>
+<section id="quicklook-plugins">
+<h2>Quicklook Plugins<a class="headerlink" href="#quicklook-plugins" title="Permalink to this heading">#</a></h2>
+<p>Install QuickLook Plugins</p>
+<p>These plugins add support for the corresponding file type to Mac Quick Look (In Finder, mark a
+file and press Space to start Quick Look). The plugins includes features like syntax
+highlighting, Markdown rendering, preview of JSON, patch files, CSV, ZIP files and more.</p>
+<div class="highlight-shell notranslate"><div class="highlight"><pre><span></span>brew install --cask <span class="se">\</span>
+    qlcolorcode <span class="se">\</span>
+    qlstephen <span class="se">\</span>
+    qlmarkdown <span class="se">\</span>
+    quicklook-json <span class="se">\</span>
+    qlprettypatch <span class="se">\</span>
+    quicklook-csv <span class="se">\</span>
+    betterzip <span class="se">\</span>
+    webpquicklook <span class="se">\</span>
+    suspicious-package
+</pre></div>
+</div>
+<p><img alt="quicklook.png" src="_images/quicklook.png" /></p>
+</section>
+<section id="alfred">
+<h2>Alfred<a class="headerlink" href="#alfred" title="Permalink to this heading">#</a></h2>
+<p>Install <a class="reference external" href="https://www.alfredapp.com/">Alfred</a></p>
+<div class="highlight-shell notranslate"><div class="highlight"><pre><span></span>brew install --cask alfred
+</pre></div>
+</div>
+<p>Alfred is an app which boosts your efficiency with hotkeys, keywords, text expansion
+and more. Search your Mac and the web, and be more productive with custom actions
+to control your Mac.</p>
+<ul class="simple">
+<li><p>Add a (<code class="docutils literal notranslate"><span class="pre">^</span></code> + <code class="docutils literal notranslate"><span class="pre">⌥</span></code> + <code class="docutils literal notranslate"><span class="pre">⌘</span></code> + <code class="docutils literal notranslate"><span class="pre">[space]</span></code>) keyboard shortcut</p></li>
+</ul>
+<p><img alt="alfred.png" src="_images/alfred.png" /></p>
+</section>
+<section id="cheatsheet">
+<h2>CheatSheet<a class="headerlink" href="#cheatsheet" title="Permalink to this heading">#</a></h2>
+<p>Install <a class="reference external" href="https://www.mediaatelier.com/CheatSheet/">CheatSheet</a></p>
+<div class="highlight-shell notranslate"><div class="highlight"><pre><span></span>brew install --cask cheatsheet
+</pre></div>
+</div>
+<p>Hold <code class="docutils literal notranslate"><span class="pre">⌘</span></code> Key a bit longer to get a list of all active shortcuts of the current
+application</p>
+<p><img alt="cheat_sheet.png" src="_images/cheat_sheet.png" /></p>
+</section>
+<section id="thefuck">
+<h2>thefuck<a class="headerlink" href="#thefuck" title="Permalink to this heading">#</a></h2>
+<p>Install <a class="reference external" href="https://github.com/nvbn/thefuck">thefuck</a></p>
+<div class="highlight-shell notranslate"><div class="highlight"><pre><span></span>brew install thefuck
+</pre></div>
+</div>
+<p>The Fuck is an app that corrects errors in previous console commands.</p>
+<p><img alt="thefuck.gif" src="_images/thefuck.gif" /></p>
+</section>
+<section id="fig">
+<h2>fig<a class="headerlink" href="#fig" title="Permalink to this heading">#</a></h2>
+<p>Install <a class="reference external" href="https://fig.io">fig</a></p>
+<ul class="simple">
+<li><p><a class="reference external" href="https://fig.io/download">https://fig.io/download</a></p></li>
+</ul>
+<p><a class="reference external" href="https://fig.io">fig</a> adds IDE-style autocomplete to your existing terminal</p>
+<ul>
+<li><p>Disable telemetry:</p>
+<div class="highlight-shell notranslate"><div class="highlight"><pre><span></span>fig settings telemetry.disabled <span class="nb">true</span>
+</pre></div>
+</div>
+</li>
+</ul>
+<p><img alt="fig.gif" src="_images/fig.gif" /></p>
+</section>
+<section id="httpie">
+<h2>httpie<a class="headerlink" href="#httpie" title="Permalink to this heading">#</a></h2>
+<p>Install <a class="reference external" href="https://github.com/httpie/httpie">HTTPie</a></p>
+<div class="highlight-shell notranslate"><div class="highlight"><pre><span></span>pipx install httpie
+</pre></div>
+</div>
+<p><a class="reference external" href="https://github.com/httpie/httpie">HTTPie</a> is a command-line HTTP client. The <code class="docutils literal notranslate"><span class="pre">http</span></code> &amp; <code class="docutils literal notranslate"><span class="pre">https</span></code> commands allow for creating and
+sending arbitrary HTTP requests. They use simple and natural syntax and provide formatted
+and colorized output.</p>
+<p><img alt="httpie.gif" src="_images/httpie.gif" /></p>
+</section>
+<section id="trash-cli">
+<h2>trash-cli<a class="headerlink" href="#trash-cli" title="Permalink to this heading">#</a></h2>
+<p>Install <a class="reference external" href="https://github.com/sindresorhus/trash-cli">trash-cli</a></p>
+<div class="highlight-shell notranslate"><div class="highlight"><pre><span></span>brew install node
+</pre></div>
+</div>
+<div class="highlight-shell notranslate"><div class="highlight"><pre><span></span>npm install --global trash-cli
+</pre></div>
+</div>
+<p>In contrast to rm which is dangerous and permanently deletes files, this only moves them to the trash, which is much
+safer and reversible.</p>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="gp">$ </span>trash --help
+
+<span class="go">  Usage</span>
+<span class="gp">    $ </span>trash &lt;path<span class="p">|</span>glob&gt; <span class="o">[</span>…<span class="o">]</span>
+
+<span class="go">  Examples</span>
+<span class="gp">    $ </span>trash unicorn.png rainbow.png
+<span class="gp">    $ </span>trash <span class="s1">&#39;*.png&#39;</span> <span class="s1">&#39;!unicorn.png&#39;</span>
+</pre></div>
+</div>
+</section>
+<section id="more-brew-apps">
+<h2>More Brew Apps<a class="headerlink" href="#more-brew-apps" title="Permalink to this heading">#</a></h2>
+<ul class="simple">
+<li><p><a class="reference external" href="https://stedolan.github.io/jq/">jq</a></p>
+<ul>
+<li><p>Powerful JSON Parsing</p></li>
+</ul>
+</li>
+<li><p><a class="reference external" href="https://htop.dev/">htop</a></p>
+<ul>
+<li><p>This is htop, a cross-platform interactive process viewer.</p></li>
+</ul>
+</li>
+<li><p><a class="reference external" href="https://nicolargo.github.io/glances/">Glances</a></p>
+<ul>
+<li><p>Glances is a cross-platform system monitoring tool written in Python.</p></li>
+</ul>
+</li>
+<li><p><a class="reference external" href="https://intelliscapesolutions.com/apps/caffeine">Caffeine</a></p>
+<ul>
+<li><p>Prevent your computer from sleeping</p></li>
+</ul>
+</li>
+<li><p><a class="reference external" href="https://www.videolan.org/vlc/">VLC</a></p>
+<ul>
+<li><p>VLC is a free and open source, cross-platform multimedia player</p></li>
+</ul>
+</li>
+</ul>
+<div class="highlight-shell notranslate"><div class="highlight"><pre><span></span>brew install jq
+brew install glances
+</pre></div>
+</div>
+<div class="highlight-shell notranslate"><div class="highlight"><pre><span></span>brew install --cask caffeine
+brew install --cask vlc
+brew install --cask htop
+</pre></div>
+</div>
+</section>
+</section>
+
+                </article>
+            </div>
+            <footer>
+                
+                <div class="related-pages">
+                    <a class="next-page" href="jetbrains.html">
+                        <div class="page-info">
+                            <div class="context">
+                                <span>Next</span>
+                            </div>
+                            <div class="title">IDE</div>
+                        </div>
+                        <svg class="furo-related-icon"><use href="#svg-arrow-right"></use></svg>
+                    </a>
+                    <a class="prev-page" href="git.html">
+                        <svg class="furo-related-icon"><use href="#svg-arrow-right"></use></svg>
+                        <div class="page-info">
+                            <div class="context">
+                                <span>Previous</span>
+                            </div>
+                            
+                            <div class="title">Version Control</div>
+                            
+                        </div>
+                    </a>
+                </div>
+                <div class="bottom-of-page">
+                    <div class="left-details">
+                        <div class="copyright">
+                            Copyright &#169; 2022, Justin Flannery
+                        </div>
+                    </div>
+                    <div class="right-details">
+                        <div class="icons">
+                            <a class="muted-link " href="https://github.com/juftin/mac-dev-setup" aria-label="GitHub">
+            <svg stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 16 16">
+                <path fill-rule="evenodd"
+                      d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.013 8.013 0 0 0 16 8c0-4.42-3.58-8-8-8z"></path>
+            </svg>
+            </a>
+                            
+                        </div>
+                    </div>
+                </div>
+                
+            </footer>
+        </div>
+        <aside class="toc-drawer">
+            
+            
+            <div class="toc-sticky toc-scroll">
+                <div class="toc-title-container">
+          <span class="toc-title">
+            On this page
+          </span>
+                </div>
+                <div class="toc-tree-container">
+                    <div class="toc-tree">
+                        <ul>
+<li><a class="reference internal" href="#">Developer Efficiency Apps</a><ul>
+<li><a class="reference internal" href="#shiftit">ShiftIt</a></li>
+<li><a class="reference internal" href="#aws-cli">AWS CLI</a></li>
+<li><a class="reference internal" href="#dunk">dunk</a></li>
+<li><a class="reference internal" href="#docker-desktop">Docker Desktop</a></li>
+<li><a class="reference internal" href="#quicklook-plugins">Quicklook Plugins</a></li>
+<li><a class="reference internal" href="#alfred">Alfred</a></li>
+<li><a class="reference internal" href="#cheatsheet">CheatSheet</a></li>
+<li><a class="reference internal" href="#thefuck">thefuck</a></li>
+<li><a class="reference internal" href="#fig">fig</a></li>
+<li><a class="reference internal" href="#httpie">httpie</a></li>
+<li><a class="reference internal" href="#trash-cli">trash-cli</a></li>
+<li><a class="reference internal" href="#more-brew-apps">More Brew Apps</a></li>
+</ul>
+</li>
+</ul>
+
+                    </div>
+                </div>
+            </div>
+            
+            
+        </aside>
+    </div>
+</div><script data-url_root="./" id="documentation_options" src="_static/documentation_options.js"></script>
+    <script src="_static/jquery.js"></script>
+    <script src="_static/underscore.js"></script>
+    <script src="_static/_sphinx_javascript_frameworks_compat.js"></script>
+    <script src="_static/doctools.js"></script>
+    <script src="_static/scripts/furo.js"></script>
+    <script src="_static/clipboard.min.js"></script>
+    <script src="_static/copybutton.js"></script>
+    </body>
+</html>
