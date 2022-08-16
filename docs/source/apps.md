@@ -191,25 +191,10 @@ brew install node
 Tmate is a fork of tmux. It provides an instant pairing solution - you can generate a secure, one-time 
 link to allow developers to SSH into your current terminal session.  
 
-<style>
-.row {
-  display: flex;
-}
-
-.column {
-  flex: 33.33%;
-  padding: 5px;
-}
-</style>
-
-<div class="row">
-  <div class="column">
-    <img src="_static/tmate_1.png" alt="tmate_1" style="width:100%">
-  </div>
-  <div class="column">
-    <img src="_static/tmate_2.png" alt="tmate_2" style="width:100%">
-  </div>
-</div>
+<p float="left" align="center">
+  <img src="_static/tmate_1.png" width="45%" />
+  <img src="_static/tmate_2.png" width="45%" />
+</p>
 
 ## More Brew Apps
 
