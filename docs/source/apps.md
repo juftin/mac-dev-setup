@@ -127,7 +127,9 @@ The Fuck is an app that corrects errors in previous console commands.
 
 Install [fig]
 
-- https://fig.io/download
+```shell
+brew install fig
+```
 
 [fig] adds IDE-style autocomplete to your existing terminal
 
@@ -178,6 +180,37 @@ $ trash --help
     $ trash '*.png' '!unicorn.png'
 ```
 
+## tmate
+
+Install [tmate]
+
+```shell
+brew install node
+```
+
+Tmate is a fork of tmux. It provides an instant pairing solution - you can generate a secure, one-time 
+link to allow developers to SSH into your current terminal session.  
+
+<style>
+.row {
+  display: flex;
+}
+
+.column {
+  flex: 33.33%;
+  padding: 5px;
+}
+</style>
+
+<div class="row">
+  <div class="column">
+    <img src="_static/tmate_1.png" alt="tmate_1" style="width:100%">
+  </div>
+  <div class="column">
+    <img src="_static/tmate_2.png" alt="tmate_2" style="width:100%">
+  </div>
+</div>
+
 ## More Brew Apps
 
 - [jq]
@@ -218,3 +251,4 @@ brew install --cask htop
 [httpie]: https://github.com/httpie/httpie
 [trash-cli]: https://github.com/sindresorhus/trash-cli
 [Hammerspoon]: https://github.com/Hammerspoon/hammerspoon
+[tmate]: https://tmate.io/
