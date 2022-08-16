@@ -185,7 +185,7 @@ $ trash --help
 Install [tmate]
 
 ```shell
-brew install node
+brew install tmate
 ```
 
 Tmate is a fork of tmux. It provides an instant pairing solution - you can generate a secure, one-time 
