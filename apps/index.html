@@ -1,0 +1,870 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+        <meta name="author" content="juftin">
+      
+      
+      <link rel="icon" href="../_static/favicon-32x32.png">
+      <meta name="generator" content="mkdocs-1.3.1, mkdocs-material-8.4.2">
+    
+    
+      
+        <title>Developer Efficiency Apps - mac-dev-setup</title>
+      
+    
+    
+      <link rel="stylesheet" href="../assets/stylesheets/main.69437709.min.css">
+      
+        
+        <link rel="stylesheet" href="../assets/stylesheets/palette.cbb835fc.min.css">
+        
+      
+      
+    
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+    <script>__md_scope=new URL("..",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="" data-md-color-accent="">
+  
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&"object"==typeof palette.color)for(var key of Object.keys(palette.color))document.body.setAttribute("data-md-color-"+key,palette.color[key])</script>
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#developer-efficiency-apps" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+<header class="md-header" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href=".." title="mac-dev-setup" class="md-header__button md-logo" aria-label="mac-dev-setup" data-md-component="logo">
+      
+  <img src="../_static/juftin.png" alt="logo">
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2Z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            mac-dev-setup
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Developer Efficiency Apps
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      <form class="md-header__option" data-md-component="palette">
+        
+          
+          
+          <input class="md-option" data-md-color-media="(prefers-color-scheme: light)" data-md-color-scheme="default" data-md-color-primary="" data-md-color-accent=""  aria-label="Switch to dark mode"  type="radio" name="__palette" id="__palette_1">
+          
+            <label class="md-header__button md-icon" title="Switch to dark mode" for="__palette_2" hidden>
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a4 4 0 0 0-4 4 4 4 0 0 0 4 4 4 4 0 0 0 4-4 4 4 0 0 0-4-4m0 10a6 6 0 0 1-6-6 6 6 0 0 1 6-6 6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12 20 8.69Z"/></svg>
+            </label>
+          
+        
+          
+          
+          <input class="md-option" data-md-color-media="(prefers-color-scheme: dark)" data-md-color-scheme="slate" data-md-color-primary="" data-md-color-accent=""  aria-label="Switch to light mode"  type="radio" name="__palette" id="__palette_2">
+          
+            <label class="md-header__button md-icon" title="Switch to light mode" for="__palette_1" hidden>
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 18c-.89 0-1.74-.2-2.5-.55C11.56 16.5 13 14.42 13 12c0-2.42-1.44-4.5-3.5-5.45C10.26 6.2 11.11 6 12 6a6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12 20 8.69Z"/></svg>
+            </label>
+          
+        
+      </form>
+    
+    
+    
+      <label class="md-header__button md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+      </label>
+      <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" aria-label="Clear" tabindex="-1">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41Z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+      <div class="md-header__source">
+        <a href="https://github.com/juftin/mac-dev-setup/" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 6.1.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc.--><path d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81z"/></svg>
+  </div>
+  <div class="md-source__repository">
+    mac-dev-setup
+  </div>
+</a>
+      </div>
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href=".." title="mac-dev-setup" class="md-nav__button md-logo" aria-label="mac-dev-setup" data-md-component="logo">
+      
+  <img src="../_static/juftin.png" alt="logo">
+
+    </a>
+    mac-dev-setup
+  </label>
+  
+    <div class="md-nav__source">
+      <a href="https://github.com/juftin/mac-dev-setup/" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 6.1.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc.--><path d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81z"/></svg>
+  </div>
+  <div class="md-source__repository">
+    mac-dev-setup
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href=".." class="md-nav__link">
+        Developer Environment Setup
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../startup/" class="md-nav__link">
+        Initial Settings and Applications
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../terminal/" class="md-nav__link">
+        Terminal Configuration
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../python/" class="md-nav__link">
+        Python
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../git/" class="md-nav__link">
+        Version Control
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+    
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          Developer Efficiency Apps
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        Developer Efficiency Apps
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#shiftit" class="md-nav__link">
+    ShiftIt
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#aws-cli" class="md-nav__link">
+    AWS CLI
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#dunk" class="md-nav__link">
+    dunk
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#docker-desktop" class="md-nav__link">
+    Docker Desktop
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#quicklook-plugins" class="md-nav__link">
+    Quicklook Plugins
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#alfred" class="md-nav__link">
+    Alfred
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#cheatsheet" class="md-nav__link">
+    CheatSheet
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#thefuck" class="md-nav__link">
+    thefuck
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#fig" class="md-nav__link">
+    fig
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#httpie" class="md-nav__link">
+    httpie
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#trash-cli" class="md-nav__link">
+    trash-cli
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#tmate" class="md-nav__link">
+    tmate
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#more-brew-apps" class="md-nav__link">
+    More Brew Apps
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../jetbrains/" class="md-nav__link">
+        IDE
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../mac_settings/" class="md-nav__link">
+        Mac Settings
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../productivity/" class="md-nav__link">
+        Productivity Hacks
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../references/" class="md-nav__link">
+        References
+      </a>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#shiftit" class="md-nav__link">
+    ShiftIt
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#aws-cli" class="md-nav__link">
+    AWS CLI
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#dunk" class="md-nav__link">
+    dunk
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#docker-desktop" class="md-nav__link">
+    Docker Desktop
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#quicklook-plugins" class="md-nav__link">
+    Quicklook Plugins
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#alfred" class="md-nav__link">
+    Alfred
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#cheatsheet" class="md-nav__link">
+    CheatSheet
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#thefuck" class="md-nav__link">
+    thefuck
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#fig" class="md-nav__link">
+    fig
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#httpie" class="md-nav__link">
+    httpie
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#trash-cli" class="md-nav__link">
+    trash-cli
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#tmate" class="md-nav__link">
+    tmate
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#more-brew-apps" class="md-nav__link">
+    More Brew Apps
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          <div class="md-content" data-md-component="content">
+            <article class="md-content__inner md-typeset">
+              
+                
+  <a href="https://github.com/juftin/mac-dev-setup/blob/main/docs/apps.md" title="Edit this page" class="md-content__button md-icon">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20.71 7.04c.39-.39.39-1.04 0-1.41l-2.34-2.34c-.37-.39-1.02-.39-1.41 0l-1.84 1.83 3.75 3.75M3 17.25V21h3.75L17.81 9.93l-3.75-3.75L3 17.25Z"/></svg>
+  </a>
+
+
+
+<h1 id="developer-efficiency-apps">Developer Efficiency Apps<a class="headerlink" href="#developer-efficiency-apps" title="Permanent link">#</a></h1>
+<h2 id="shiftit">ShiftIt<a class="headerlink" href="#shiftit" title="Permanent link">#</a></h2>
+<p><a href="https://github.com/peterklijn/hammerspoon-shiftit">ShiftIt</a> is a tool to manage window positions using hotkeys. It's no longer
+maintained but its key bindings have been ported over to an automation tool
+called <a href="https://github.com/Hammerspoon/hammerspoon">HammerSpoon</a>.</p>
+<pre><code class="language-shell">brew install hammerspoon
+</code></pre>
+<ul>
+<li>
+<p>Download, unzip, and open the ShitIt Key Bindings for Hammerspoon
+  <a href="https://github.com/peterklijn/hammerspoon-shiftit/raw/master/Spoons/ShiftIt.spoon.zip">https://github.com/peterklijn/hammerspoon-shiftit/raw/master/Spoons/ShiftIt.spoon.zip</a></p>
+</li>
+<li>
+<p>Click on the Hammerspoon menubar icon and click on 'Open Config'. An init.lua file should now
+  open in your editor of choice.</p>
+</li>
+<li>
+<p>Paste the following configuration in the init.lua file, save it and close it.</p>
+<p><code>text
+hs.loadSpoon("ShiftIt")
+spoon.ShiftIt:bindHotkeys({})</code></p>
+</li>
+</ul>
+<p><img alt="shiftit.gif" src="../_static/shiftit.gif" /></p>
+<p><img alt="shiftit_commands.png" src="../_static/shiftit_commands.png" /></p>
+<h2 id="aws-cli">AWS CLI<a class="headerlink" href="#aws-cli" title="Permanent link">#</a></h2>
+<p>Install <a href="https://docs.aws.amazon.com/cli/index.html">AWS CLI v2</a></p>
+<pre><code class="language-shell">curl &quot;https://awscli.amazonaws.com/AWSCLIV2.pkg&quot; -o ~/Downloads/AWSCLIV2.pkg &amp;&amp; open ~/Downloads/AWSCLIV2.pkg
+</code></pre>
+<p><img alt="aws_cli.png" src="../_static/aws_cli.png" /></p>
+<h2 id="dunk">dunk<a class="headerlink" href="#dunk" title="Permanent link">#</a></h2>
+<p>Install and use <a href="https://github.com/darrenburns/dunk">dunk</a> for git diffs</p>
+<p>Pipe your git diff output into dunk to make it prettier!</p>
+<pre><code class="language-shell">pipx install dunk
+git config --global alias.dunk '!git diff | dunk | less -R'
+</code></pre>
+<p><img alt="dunk.png" src="../_static/dunk.png" /></p>
+<h2 id="docker-desktop">Docker Desktop<a class="headerlink" href="#docker-desktop" title="Permanent link">#</a></h2>
+<p>Install <a href="https://www.docker.com/products/docker-desktop/">Docker Desktop</a></p>
+<ul>
+<li><a href="https://docs.docker.com/desktop/install/mac-install/">https://docs.docker.com/desktop/install/mac-install/</a></li>
+<li>After Installation, grant Docker additional resources the Docker Desktop
+  App Preferences</li>
+</ul>
+<p><img alt="img.png" src="../_static/docker_desktop.png" /></p>
+<h2 id="quicklook-plugins">Quicklook Plugins<a class="headerlink" href="#quicklook-plugins" title="Permanent link">#</a></h2>
+<p>Install QuickLook Plugins</p>
+<p>These plugins add support for the corresponding file type to Mac Quick Look (In Finder, mark a
+file and press Space to start Quick Look). The plugins includes features like syntax
+highlighting, Markdown rendering, preview of JSON, patch files, CSV, ZIP files and more.</p>
+<pre><code class="language-shell">brew install --cask \
+    qlcolorcode \
+    qlstephen \
+    qlmarkdown \
+    quicklook-json \
+    qlprettypatch \
+    quicklook-csv \
+    betterzip \
+    webpquicklook \
+    suspicious-package
+</code></pre>
+<p><img alt="quicklook.png" src="../_static/quicklook.png" /></p>
+<h2 id="alfred">Alfred<a class="headerlink" href="#alfred" title="Permanent link">#</a></h2>
+<p>Install <a href="https://www.alfredapp.com/">Alfred</a></p>
+<pre><code class="language-shell">brew install --cask alfred
+</code></pre>
+<p>Alfred is an app which boosts your efficiency with hotkeys, keywords, text expansion
+and more. Search your Mac and the web, and be more productive with custom actions
+to control your Mac.</p>
+<ul>
+<li>Add a (<code>^</code> + <code>⌥</code> + <code>⌘</code> + <code>[space]</code>) keyboard shortcut</li>
+</ul>
+<p><img alt="alfred.png" src="../_static/alfred.png" /></p>
+<h2 id="cheatsheet">CheatSheet<a class="headerlink" href="#cheatsheet" title="Permanent link">#</a></h2>
+<p>Install <a href="https://www.mediaatelier.com/CheatSheet/">CheatSheet</a></p>
+<pre><code class="language-shell">brew install --cask cheatsheet
+</code></pre>
+<p>Hold <code>⌘</code> Key a bit longer to get a list of all active shortcuts of the current
+application</p>
+<p><img alt="cheat_sheet.png" src="../_static/cheat_sheet.png" /></p>
+<h2 id="thefuck">thefuck<a class="headerlink" href="#thefuck" title="Permanent link">#</a></h2>
+<p>Install <a href="https://github.com/nvbn/thefuck">thefuck</a></p>
+<pre><code class="language-shell">brew install thefuck
+</code></pre>
+<p>The Fuck is an app that corrects errors in previous console commands.</p>
+<p><img alt="thefuck.gif" src="../_static/thefuck.gif" /></p>
+<h2 id="fig">fig<a class="headerlink" href="#fig" title="Permanent link">#</a></h2>
+<p>Install <a href="https://fig.io">fig</a></p>
+<pre><code class="language-shell">brew install fig
+</code></pre>
+<p><a href="https://fig.io">fig</a> adds IDE-style autocomplete to your existing terminal</p>
+<ul>
+<li>Disable telemetry:
+  <code>shell
+  fig settings telemetry.disabled true</code></li>
+</ul>
+<p><img alt="fig.gif" src="../_static/fig.gif" /></p>
+<h2 id="httpie">httpie<a class="headerlink" href="#httpie" title="Permanent link">#</a></h2>
+<p>Install <a href="https://github.com/httpie/httpie">HTTPie</a></p>
+<pre><code class="language-shell">pipx install httpie
+</code></pre>
+<p><a href="https://github.com/httpie/httpie">HTTPie</a> is a command-line HTTP client. The <code>http</code> &amp; <code>https</code> commands allow for creating and
+sending arbitrary HTTP requests. They use simple and natural syntax and provide formatted
+and colorized output.</p>
+<p><img alt="httpie.gif" src="../_static/httpie.gif" /></p>
+<h2 id="trash-cli">trash-cli<a class="headerlink" href="#trash-cli" title="Permanent link">#</a></h2>
+<p>Install <a href="https://github.com/sindresorhus/trash-cli">trash-cli</a></p>
+<pre><code class="language-shell">brew install node
+</code></pre>
+<pre><code class="language-shell">npm install --global trash-cli
+</code></pre>
+<p>In contrast to rm which is dangerous and permanently deletes files, this only moves them to the trash, which is much
+safer and reversible.</p>
+<pre><code class="language-console">$ trash --help
+
+  Usage
+    $ trash &lt;path|glob&gt; […]
+
+  Examples
+    $ trash unicorn.png rainbow.png
+    $ trash '*.png' '!unicorn.png'
+</code></pre>
+<h2 id="tmate">tmate<a class="headerlink" href="#tmate" title="Permanent link">#</a></h2>
+<p>Install <a href="https://tmate.io/">tmate</a></p>
+<pre><code class="language-shell">brew install tmate
+</code></pre>
+<p>Tmate is a fork of tmux. It provides an instant pairing solution - you can generate a secure, one-time
+link to allow developers to SSH into your current terminal session.</p>
+<p><img alt="tmate" src="../_static/tmate.png" /></p>
+<h2 id="more-brew-apps">More Brew Apps<a class="headerlink" href="#more-brew-apps" title="Permanent link">#</a></h2>
+<ul>
+<li><a href="https://stedolan.github.io/jq/">jq</a><ul>
+<li>Powerful JSON Parsing</li>
+</ul>
+</li>
+<li><a href="https://htop.dev/">htop</a><ul>
+<li>This is htop, a cross-platform interactive process viewer.</li>
+</ul>
+</li>
+<li><a href="https://nicolargo.github.io/glances/">Glances</a><ul>
+<li>Glances is a cross-platform system monitoring tool written in Python.</li>
+</ul>
+</li>
+<li><a href="https://intelliscapesolutions.com/apps/caffeine">Caffeine</a><ul>
+<li>Prevent your computer from sleeping</li>
+</ul>
+</li>
+<li><a href="https://www.videolan.org/vlc/">VLC</a><ul>
+<li>VLC is a free and open source, cross-platform multimedia player</li>
+</ul>
+</li>
+</ul>
+<pre><code class="language-shell">brew install jq
+brew install glances
+</code></pre>
+<pre><code class="language-shell">brew install --cask caffeine
+brew install --cask vlc
+brew install --cask htop
+</code></pre>
+
+
+
+
+              
+            </article>
+            
+          </div>
+        </div>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+    
+    <nav class="md-footer__inner md-grid" aria-label="Footer" >
+      
+        
+        <a href="../git/" class="md-footer__link md-footer__link--prev" aria-label="Previous: Version Control" rel="prev">
+          <div class="md-footer__button md-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
+          </div>
+          <div class="md-footer__title">
+            <div class="md-ellipsis">
+              <span class="md-footer__direction">
+                Previous
+              </span>
+              Version Control
+            </div>
+          </div>
+        </a>
+      
+      
+        
+        <a href="../jetbrains/" class="md-footer__link md-footer__link--next" aria-label="Next: IDE" rel="next">
+          <div class="md-footer__title">
+            <div class="md-ellipsis">
+              <span class="md-footer__direction">
+                Next
+              </span>
+              IDE
+            </div>
+          </div>
+          <div class="md-footer__button md-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11H4Z"/></svg>
+          </div>
+        </a>
+      
+    </nav>
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+    <div class="md-copyright__highlight">
+      Copyright &copy; 2022 Justin Flannery
+    </div>
+  
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    <script id="__config" type="application/json">{"base": "..", "features": [], "search": "../assets/javascripts/workers/search.ecf98df9.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.placeholder": "Search", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version.title": "Select version"}}</script>
+    
+    
+      <script src="../assets/javascripts/bundle.9c69f0bc.min.js"></script>
+      
+    
+  </body>
+</html>
