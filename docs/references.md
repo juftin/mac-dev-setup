@@ -9,16 +9,16 @@ impressive and complete guide at https://github.com/sb2nov/mac-setup.
 
 ## ~/.zshrc
 
-- [Download](dot_files/zshrc.zsh)
+- [Download](dot_files/zshrc.txt)
 
 ```shell
---8<-- "docs/dot_files/zshrc.zsh"
+--8<-- "docs/dot_files/zshrc.txt"
 ```
 
 ## ~/.zsh_aliases
 
-- [Download](dot_files/zsh_aliases.zsh)
+- [Download](dot_files/zsh_aliases.txt)
 
 ```shell
---8<-- "docs/dot_files/zsh_aliases.zsh"
+--8<-- "docs/dot_files/zsh_aliases.txt"
 ```

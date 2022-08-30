@@ -121,7 +121,7 @@ git clone --depth=1 https://github.com/romkatv/powerlevel10k.git ${ZSH_CUSTOM:-$
 The `~/.zshrc` file is the default configuration file for the new [zsh](#zsh) x [Oh My ZSH](Oh My Zsh)
 shell environment.
 
-There is an example file at [dot_files/.zshrc](dot_files/zshrc.zsh) but we will be making changes
+There is an [example file](dot_files/zshrc.txt) but we will be making changes
 to the `plugins` as well as the `theme` of our zsh environment by updating the
 following lines:
 
