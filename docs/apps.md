@@ -188,8 +188,8 @@ Install [tmate]
 brew install tmate
 ```
 
-Tmate is a fork of tmux. It provides an instant pairing solution - you can generate a secure, one-time 
-link to allow developers to SSH into your current terminal session.  
+Tmate is a fork of tmux. It provides an instant pairing solution - you can generate a secure, one-time
+link to allow developers to SSH into your current terminal session.
 
 ![tmate](_static/tmate.png)
 

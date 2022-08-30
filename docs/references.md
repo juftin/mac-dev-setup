@@ -2,8 +2,8 @@
 
 ## Credits
 
-This documentation was inspired by and based off of the much more 
-impressive and complete guide at https://github.com/sb2nov/mac-setup. 
+This documentation was inspired by and based off of the much more
+impressive and complete guide at https://github.com/sb2nov/mac-setup.
 
 ## Files
 
