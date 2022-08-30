@@ -4,11 +4,17 @@ Development Environment Setup: MacOS
 
 ## https://juftin.com/mac-dev-setup
 
-- [Initial Settings and Applications](docs/source/startup.md)
-- [Terminal Configuration](docs/source/terminal.md)
-- [Python](docs/source/python.md)
-- [Version Control](docs/source/git.md)
-- [Developer Efficiency Apps](docs/source/apps.md)
-- [IDE](docs/source/jetbrains.md)
-- [Mac Settings](docs/source/mac_settings.md)
-- [Productivity Hacks](docs/source/productivity.md)
+- [Initial Settings and Applications](docs/startup.md)
+- [Terminal Configuration](docs/terminal.md)
+- [Python](docs/python.md)
+- [Version Control](docs/git.md)
+- [Developer Efficiency Apps](docs/apps.md)
+- [IDE](docs/jetbrains.md)
+- [Mac Settings](docs/mac_settings.md)
+- [Productivity Hacks](docs/productivity.md)
+
+------------
+
+<p align="center">
+<img src="https://raw.githubusercontent.com/juftin/juftin/main/static/juftin.png" alt="juftin" style="height:60px; width:60px;"/>
+</p>
