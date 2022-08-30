@@ -16,9 +16,9 @@ brew install pyenv
 Run the following lines to update your dot files, informing them to use [pyenv] to manage Python
 
 ```shell
-echo 'export PYENV_ROOT="$HOME/.pyenv"' >> ~/.zshrc
-echo 'command -v pyenv >/dev/null || export PATH="$PYENV_ROOT/bin:$PATH"' >> ~/.zshrc
-echo 'eval "$(pyenv init -)"' >> ~/.zshrc
+echo 'export PYENV_ROOT="$HOME/.pyenv"' >> ~/zshrc.zsh
+echo 'command -v pyenv >/dev/null || export PATH="$PYENV_ROOT/bin:$PATH"' >> ~/zshrc.zsh
+echo 'eval "$(pyenv init -)"' >> ~/zshrc.zsh
 echo 'export PYENV_ROOT="$HOME/.pyenv"' >> ~/.zprofile
 echo 'command -v pyenv >/dev/null || export PATH="$PYENV_ROOT/bin:$PATH"' >> ~/.zprofile
 echo 'eval "$(pyenv init -)"' >> ~/.zprofile

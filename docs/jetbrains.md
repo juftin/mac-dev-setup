@@ -65,13 +65,13 @@ I like to start off by sorting JetBrains plugins by downloads. To do this I go t
 
 ## Settings Files
 
-There is a zip file at [jetbrains/settings.zip](../../jetbrains/settings.zip) that contains the
+There is a zip file at [jetbrains/settings.zip](jetbrains/settings.zip) that contains the
 base settings for JetBrains IDEs. See the
 [JetBrains Documentation](https://www.jetbrains.com/help/idea/sharing-your-ide-settings.html) for more information.
 
 ## JetBrains Settings
 
-Most of these settings can be imported from the [jetbrains/settings.zip](../../jetbrains/settings.zip) file.
+Most of these settings can be imported from the [jetbrains/settings.zip](jetbrains/settings.zip) file.
 
 ### Git Commit UI
 

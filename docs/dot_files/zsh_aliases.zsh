@@ -33,7 +33,7 @@ alias new_alias="nano ~/.zsh_aliases"
 function sync() {
   log_event info "Syncing ZSH Configuration..."
   source ~/.zshrc
-  source ~/.zsh_aliases
+  source ~/zsh_aliases
   log_event info "ZSH Synced!"
 }
 
