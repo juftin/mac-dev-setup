@@ -10,3 +10,4 @@ Development Environment Setup: MacOS
 - [IDE](jetbrains.md)
 - [Mac Settings](mac_settings.md)
 - [Productivity Hacks](productivity.md)
+- [References](references.md)
