@@ -12,6 +12,7 @@ Development Environment Setup: MacOS
 - [IDE](docs/jetbrains.md)
 - [Mac Settings](docs/mac_settings.md)
 - [Productivity Hacks](docs/productivity.md)
+- [Linux Headless Setup](docs/linux.md)
 - [References](docs/references.md)
 
 ------------

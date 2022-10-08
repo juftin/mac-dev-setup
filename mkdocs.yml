@@ -34,6 +34,7 @@ nav:
   - jetbrains.md
   - mac_settings.md
   - productivity.md
+  - linux.md
   - references.md
 extra:
   generator: false
