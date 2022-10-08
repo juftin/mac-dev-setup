@@ -31,7 +31,7 @@ jobs:
                 pip install poetry
                 poetry --version
         -   name: Fetch Related Pull Request Information
-            uses: 8BitJonny/gh-get-current-pr@2.1.1
+            uses: 8BitJonny/gh-get-current-pr@2.1.2
             id: PR
         -   name: Fetch Related Pull Request Labels
             run: |
@@ -39,18 +39,6 @@ jobs:
                 echo "LABELS: ${{ steps.PR.outputs.pr_labels }}"
                 echo "NUMBER: ${{ steps.PR.outputs.number }}"
                 echo "URL: ${{ steps.PR.outputs.pr_url }}"
-        -   name: Set up Python
-            uses: actions/setup-python@v4
-            with:
-                python-version: '3.9'
-        -   name: Upgrade pip
-            run: |
-                pip install --upgrade pip
-                pip --version
-        -   name: Install Poetry
-            run: |
-                pip install poetry
-                poetry --version
         -   name: Version Bump - MAJOR
             if: contains(env.PR_LABELS, 'BUMP_MAJOR')
             run: |
@@ -72,10 +60,10 @@ jobs:
                 echo "It doesn't look like it originated from a PR - or the PR was missing labels"
                 echo "Proceeding with default version bump: PATCH"
                 poetry version patch
-        -   name: Declare Version Variable
+        -   name: Update Version Variable
             run: |
                 PROJECT_VERSION=$(poetry version --short)
-                echo PROJECT_VERSION='${PROJECT_VERSION}' >> ${GITHUB_ENV}
+                echo PROJECT_VERSION=${PROJECT_VERSION} >> $GITHUB_ENV
         -   uses: EndBug/add-and-commit@v9
             with:
                 default_author: github_actions
