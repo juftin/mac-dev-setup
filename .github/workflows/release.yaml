@@ -72,6 +72,10 @@ jobs:
                 echo "It doesn't look like it originated from a PR - or the PR was missing labels"
                 echo "Proceeding with default version bump: PATCH"
                 poetry version patch
+        -   name: Declare Version Variable
+            run: |
+                PROJECT_VERSION=$(poetry version --short)
+                echo PROJECT_VERSION='${PROJECT_VERSION}' >> ${GITHUB_ENV}
         -   uses: EndBug/add-and-commit@v9
             with:
                 default_author: github_actions
