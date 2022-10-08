@@ -2,46 +2,46 @@
 
 site_name: mac-dev-setup
 theme:
-  favicon: _static/favicon-32x32.png
-  logo: _static/juftin.png
-  name: material
-  palette:
+    favicon: _static/favicon-32x32.png
+    logo: _static/juftin.png
+    name: material
+    palette:
     # Palette toggle for light mode
-    - media: "(prefers-color-scheme: light)"
-      scheme: default
-      toggle:
-        icon: material/brightness-7
-        name: Switch to dark mode
+    -   media: '(prefers-color-scheme: light)'
+        scheme: default
+        toggle:
+            icon: material/brightness-7
+            name: Switch to dark mode
     # Palette toggle for dark mode
-    - media: "(prefers-color-scheme: dark)"
-      scheme: slate
-      toggle:
-        icon: material/brightness-4
-        name: Switch to light mode
+    -   media: '(prefers-color-scheme: dark)'
+        scheme: slate
+        toggle:
+            icon: material/brightness-4
+            name: Switch to light mode
 repo_url: https://github.com/juftin/mac-dev-setup/
 repo_name: mac-dev-setup
-edit_uri: "blob/main/docs/"
+edit_uri: blob/main/docs/
 site_author: juftin
 remote_branch: gh-pages
 copyright: Copyright &copy; 2022 Justin Flannery
 nav:
-  - index.md
-  - startup.md
-  - terminal.md
-  - python.md
-  - git.md
-  - apps.md
-  - jetbrains.md
-  - mac_settings.md
-  - productivity.md
-  - references.md
+-   index.md
+-   startup.md
+-   terminal.md
+-   python.md
+-   git.md
+-   apps.md
+-   jetbrains.md
+-   mac_settings.md
+-   productivity.md
+-   references.md
 extra:
-  generator: false
+    generator: false
 markdown_extensions:
-  - toc:
-      permalink: "#"
-  - pymdownx.snippets:
-  - pymdownx.magiclink:
-  - attr_list:
+-   toc:
+        permalink: '#'
+-   pymdownx.snippets:
+-   pymdownx.magiclink:
+-   attr_list:
 plugins:
-  - search
+-   search
