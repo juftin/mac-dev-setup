@@ -17,6 +17,7 @@ path = "mkdocs.yaml"
 
 [tool.hatch.envs.docs]
 type = "pip-compile"
+lock-filename = "requirements.txt"
 
 [tool.hatch.version]
 path = ".github/VERSION"
