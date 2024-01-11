@@ -1,29 +1,22 @@
-[tool.poetry]
-name = "mac-dev-setup"
-description = "juftin's Development Setup"
-version = "0.1.3"
-authors = ["Justin Flannery <juftin@juftin.com>"]
-license = "MIT"
-readme = "README.md"
-homepage = "https://github.com/juftin/mac-dev-setup"
-repository = "https://github.com/juftin/mac-dev-setup"
-documentation = "https://juftin.github.io/mac-dev-setup"
-classifiers = [
-    "Development Status :: 4 - Beta",
-    "Operating System :: OS Independent",
-    "Programming Language :: Python :: 3",
-    "Programming Language :: Python :: 3.7",
-    "Programming Language :: Python :: 3.8",
-    "Programming Language :: Python :: 3.9",
-    "Programming Language :: Python :: 3.10"
+[project]
+authors = [
+  {name = "Justin Flannery", email = "juftin@juftin.com"}
 ]
+dynamic = ["version"]
+dependencies = []
+license = "MIT"
+name = "mac-dev-setup"
+readme = "README.md"
+requires-python = ">=3.8"
 
-[tool.poetry.dependencies]
-python = ">=3.7.1,<4.0"
+[tool.hatch.env]
+requires = ["hatch-pip-compile", "hatch-mkdocs"]
 
-[tool.poetry.dev-dependencies]
-mkdocs = "^1.4.0"
-mkdocs-material = "^8.5.6"
+[tool.hatch.env.collectors.mkdocs.docs]
+path = "mkdocs.yaml"
 
-[tool.poetry.urls]
-Changelog = "https://github.com/juftin/mac-dev-setup/releases"
+[tool.hatch.envs.docs]
+type = "pip-compile"
+
+[tool.hatch.version]
+path = ".github/VERSION"

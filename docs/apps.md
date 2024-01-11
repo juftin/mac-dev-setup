@@ -10,13 +10,13 @@ called [HammerSpoon].
 brew install hammerspoon
 ```
 
-- Download, unzip, and open the ShitIt Key Bindings for Hammerspoon
-  https://github.com/peterklijn/hammerspoon-shiftit/raw/master/Spoons/ShiftIt.spoon.zip
+-   Download, unzip, and open the ShitIt Key Bindings for Hammerspoon
+    https://github.com/peterklijn/hammerspoon-shiftit/raw/master/Spoons/ShiftIt.spoon.zip
 
-- Click on the Hammerspoon menubar icon and click on 'Open Config'. An init.lua file should now
-  open in your editor of choice.
+-   Click on the Hammerspoon menubar icon and click on 'Open Config'. An init.lua file should now
+    open in your editor of choice.
 
-- Paste the following configuration in the init.lua file, save it and close it.
+-   Paste the following configuration in the init.lua file, save it and close it.
 
     ```text
     hs.loadSpoon("ShiftIt")
@@ -54,9 +54,9 @@ git config --global alias.dunk '!git diff | dunk | less -R'
 
 Install [Docker Desktop]
 
-- https://docs.docker.com/desktop/install/mac-install/
-- After Installation, grant Docker additional resources the Docker Desktop
-  App Preferences
+-   https://docs.docker.com/desktop/install/mac-install/
+-   After Installation, grant Docker additional resources the Docker Desktop
+    App Preferences
 
 ![img.png](_static/docker_desktop.png)
 
@@ -83,35 +83,6 @@ brew install --cask \
 
 ![quicklook.png](_static/quicklook.png)
 
-## Alfred
-
-Install [Alfred]
-
-```shell
-brew install --cask alfred
-```
-
-Alfred is an app which boosts your efficiency with hotkeys, keywords, text expansion
-and more. Search your Mac and the web, and be more productive with custom actions
-to control your Mac.
-
-- Add a (`^` + `⌥` + `⌘` + `[space]`) keyboard shortcut
-
-![alfred.png](_static/alfred.png)
-
-## CheatSheet
-
-Install [CheatSheet]
-
-```shell
-brew install --cask cheatsheet
-```
-
-Hold `⌘` Key a bit longer to get a list of all active shortcuts of the current
-application
-
-![cheat_sheet.png](_static/cheat_sheet.png)
-
 ## thefuck
 
 Install [thefuck]
@@ -119,6 +90,7 @@ Install [thefuck]
 ```shell
 brew install thefuck
 ```
+
 The Fuck is an app that corrects errors in previous console commands.
 
 ![thefuck.gif](_static/thefuck.gif)
@@ -133,10 +105,10 @@ brew install fig
 
 [fig] adds IDE-style autocomplete to your existing terminal
 
-- Disable telemetry:
-  ```shell
-  fig settings telemetry.disabled true
-  ```
+-   Disable telemetry:
+    ```shell
+    fig settings telemetry.disabled true
+    ```
 
 ![fig.gif](_static/fig.gif)
 
@@ -195,16 +167,16 @@ link to allow developers to SSH into your current terminal session.
 
 ## More Brew Apps
 
-- [jq]
-    - Powerful JSON Parsing
-- [htop]
-    - This is htop, a cross-platform interactive process viewer.
-- [Glances]
-    - Glances is a cross-platform system monitoring tool written in Python.
-- [Caffeine]
-    - Prevent your computer from sleeping
-- [VLC]
-    - VLC is a free and open source, cross-platform multimedia player
+-   [jq]
+    -   Powerful JSON Parsing
+-   [htop]
+    -   This is htop, a cross-platform interactive process viewer.
+-   [Glances]
+    -   Glances is a cross-platform system monitoring tool written in Python.
+-   [Caffeine]
+    -   Prevent your computer from sleeping
+-   [VLC]
+    -   VLC is a free and open source, cross-platform multimedia player
 
 ```shell
 brew install jq

@@ -7,7 +7,7 @@ Install and manage python versions using [pyenv].
 This process uses [pyenv] to manage Python installation and versions. [pyenv] is a Python
 version manager that can manage and install different versions of Python.
 
-Install [pyenv] with [Homebrew](Homebrew)
+Install [pyenv] with [homebrew]
 
 ```shell
 brew install pyenv
@@ -17,10 +17,10 @@ Run the following lines to update your dot files, informing them to use [pyenv] 
 
 ```shell
 echo 'export PYENV_ROOT="$HOME/.pyenv"' >> ~/.zshrc
-echo 'command -v pyenv >/dev/null || export PATH="$PYENV_ROOT/bin:$PATH"' >> ~/.zshrc
+echo '[[ -d $PYENV_ROOT/bin ]] && export PATH="$PYENV_ROOT/bin:$PATH"' >> ~/.zshrc
 echo 'eval "$(pyenv init -)"' >> ~/.zshrc
 echo 'export PYENV_ROOT="$HOME/.pyenv"' >> ~/.zprofile
-echo 'command -v pyenv >/dev/null || export PATH="$PYENV_ROOT/bin:$PATH"' >> ~/.zprofile
+echo '[[ -d $PYENV_ROOT/bin ]] && export PATH="$PYENV_ROOT/bin:$PATH"' >> ~/.zprofile
 echo 'eval "$(pyenv init -)"' >> ~/.zprofile
 exec "$SHELL"
 ```
@@ -32,11 +32,12 @@ brew install openssl readline sqlite3 xz zlib tcl-tk
 ```
 
 ```shell
-pyenv install 3.10.5
-pyenv install 3.9.5
-pyenv install 3.8.13
-pyenv install 3.7.13
-pyenv global 3.9.5 3.10.5 3.8.13 3.7.13
+pyenv install 3.12
+pyenv install 3.11
+pyenv install 3.10
+pyenv install 3.9
+pyenv install 3.8
+pyenv global 3.11 3.12 3.10 3.9 3.8
 pyenv rehash
 ```
 
@@ -68,9 +69,11 @@ applications.
 brew install pipx
 pipx ensurepath
 ```
+
 ![pipx_demo.gif](_static/pipx_demo.gif)
 
 [Python]: https://python.org/
 [pipx]: https://github.com/pypa/pipx
 [pyenv]: https://github.com/yyuu/pyenv
 [IPython]: http://ipython.org/
+[homebrew]: https://brew.sh/

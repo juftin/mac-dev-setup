@@ -19,8 +19,8 @@ any developer.
 
 Installation
 
-- Before you can run [Homebrew] you need to have the Command Line Tools for [Xcode](Xcode)
-  installed.
+-   Before you can run [Homebrew] you need to have the Command Line Tools for [Xcode](#xcode)
+    installed.
 
 ```shell
 /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install.sh)"
@@ -41,31 +41,16 @@ brew install --cask iterm2
 
 ![iterm2.png](_static/iterm2.png)
 
-### zsh
-
-Install `zsh`
-
-The Z shell (also known as zsh) is a Unix shell that is built on top of bash (the default shell
-for macOS) with additional features.
-
-```shell
-brew install zsh
-```
-
-```{note}
-Restart your terminal after running the above command
-```
-
 ### Oh My Zsh
 
-Install [Oh My Zsh]
+Install [OhMyZsh]
 
-[Oh My Zsh] is an open source, community-driven framework for managing your Zsh configuration.
-It comes bundled with  thousands of helpful functions, helpers, plugins, themes, and more.
+[OhMyZsh] is an open source, community-driven framework for managing your Zsh configuration.
+It comes bundled with thousands of helpful functions, helpers, plugins, themes, and more.
 
- ```shell
- sh -c "$(curl -fsSL https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"
- ```
+```shell
+sh -c "$(curl -fsSL https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"
+```
 
 ![img.png](_static/oh_my_zsh.png)
 
@@ -76,11 +61,11 @@ It comes bundled with  thousands of helpful functions, helpers, plugins, themes,
 Create a custom hot-key to launch [iTerm2] from
 anywhere: (`^` + `⌥` + `⌘` + `i`)
 
-- `iTerm2 Preferences` -> `Keys` -> `Hotkey` -> `Create dedicated hotkey window`
-- Set iTerm2 to open (hidden) at login: `System Preferences` -> `Users & Groups`
-  -> `Login Items`
-- If not already, set all profiles to use the `MesloLGS NF` font
-  in `iTerm2 Preferences` -> `Profile` -> `Text` -> `Font`
+-   `iTerm2 Preferences` -> `Keys` -> `Hotkey` -> `Create dedicated hotkey window`
+-   Set iTerm2 to open (hidden) at login: `System Preferences` -> `Users & Groups`
+    -> `Login Items`
+-   If not already, set all profiles to use the `MesloLGS NF` font
+    in `iTerm2 Preferences` -> `Profile` -> `Text` -> `Font`
 
 ![iterm_hotkey.png](_static/iterm_hotkey.png)
 
@@ -118,7 +103,7 @@ git clone --depth=1 https://github.com/romkatv/powerlevel10k.git ${ZSH_CUSTOM:-$
 
 ### `.zshrc` configuration
 
-The `~/.zshrc` file is the default configuration file for the new [zsh](#zsh) x [Oh My ZSH](Oh My Zsh)
+The `~/.zshrc` file is the default configuration file for the new [zsh](#zsh) x [OhMyZSH](#oh-my-zsh)
 shell environment.
 
 There is an [example file](dot_files/zshrc.txt) but we will be making changes
@@ -143,7 +128,7 @@ plugins=(
 )
 ```
 
-[Xcode]: https://sourabhbajaj.com/mac-setup/Xcode/
+[Xcode]: https://developer.apple.com/xcode/
 [Homebrew]: https://brew.sh/
 [iTerm2]: https://www.iterm2.com/
 [OhMyZsh]: https://github.com/robbyrussell/oh-my-zsh
