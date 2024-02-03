@@ -27,16 +27,6 @@ brew install hammerspoon
 
 ![shiftit_commands.png](_static/shiftit_commands.png)
 
-## AWS CLI
-
-Install [AWS CLI v2]
-
-```shell
-curl "https://awscli.amazonaws.com/AWSCLIV2.pkg" -o ~/Downloads/AWSCLIV2.pkg && open ~/Downloads/AWSCLIV2.pkg
-```
-
-![aws_cli.png](_static/aws_cli.png)
-
 ## dunk
 
 Install and use [dunk] for git diffs
@@ -64,22 +54,19 @@ Install [Docker Desktop]
 
 Install QuickLook Plugins
 
-These plugins add support for the corresponding file type to Mac Quick Look (In Finder, mark a
-file and press Space to start Quick Look). The plugins includes features like syntax
-highlighting, Markdown rendering, preview of JSON, patch files, CSV, ZIP files and more.
+The application offers a Quick Look Extension for macOS 10.15 Catalina
+and later for previewing source files.
 
 ```shell
-brew install --cask \
-    qlcolorcode \
-    qlstephen \
-    qlmarkdown \
-    quicklook-json \
-    qlprettypatch \
-    quicklook-csv \
-    betterzip \
-    webpquicklook \
-    suspicious-package
+brew install --cask --no-quarantine syntax-highlight
 ```
+
+> NOTE:
+>
+> To use the Quick Look preview you must launch the Application at
+> least once. In this way the Quick Look Extension will be discovered
+> by the system and will be available in the
+> System preferences > Extensions > Quick Look.
 
 ![quicklook.png](_static/quicklook.png)
 
@@ -93,24 +80,41 @@ brew install thefuck
 
 The Fuck is an app that corrects errors in previous console commands.
 
-![thefuck.gif](_static/thefuck.gif)
-
-## fig
-
-Install [fig]
+You also need to add the following to your `~/.zshrc` file:
 
 ```shell
-brew install fig
+eval "$(thefuck --alias)"
+eval "$(thefuck --alias dang)"
 ```
 
-[fig] adds IDE-style autocomplete to your existing terminal
+![thefuck.gif](_static/thefuck.gif)
 
--   Disable telemetry:
+## codewhisperer
+
+Install [codewhisperer] (by AWS)
+
+```shell
+brew install --cask codewhisperer
+```
+
+[codewhisperer] (formerly known as `fig`) adds IDE-style autocomplete
+to your terminal + some AI / LLM magic as well. Using `codewhisperer` requires
+a free AWS builder account for personal use.
+
+> NOTE:
+>
+> You must open the `CodeWhisperer` app at least once to set
+> initial permissions and log in before you can use it.
+
+-   Disable telemetry and shared data:
     ```shell
-    fig settings telemetry.disabled true
+    cw settings telemetry.enabled false
+    cw settings codeWhisperer.shareCodeWhispererContentWithAWS false
     ```
 
-![fig.gif](_static/fig.gif)
+![codewhisperer.gif](_static/codewhisperer.gif)
+
+![codewhisperer-ai.gif](_static/codewhisperer-ai.gif)
 
 ## httpie
 
@@ -190,14 +194,12 @@ brew install --cask htop
 ```
 
 [ShiftIt]: https://github.com/peterklijn/hammerspoon-shiftit
-[AWS CLI v2]: https://docs.aws.amazon.com/cli/index.html
 [dunk]: https://github.com/darrenburns/dunk
 [Docker Desktop]: https://www.docker.com/products/docker-desktop/
 [Alfred]: https://www.alfredapp.com/
 [CheatSheet]: https://www.mediaatelier.com/CheatSheet/
 [VLC]: https://www.videolan.org/vlc/
 [Caffeine]: https://intelliscapesolutions.com/apps/caffeine
-[fig]: https://fig.io
 [thefuck]: https://github.com/nvbn/thefuck
 [jq]: https://stedolan.github.io/jq/
 [Glances]: https://nicolargo.github.io/glances/
@@ -206,3 +208,4 @@ brew install --cask htop
 [trash-cli]: https://github.com/sindresorhus/trash-cli
 [Hammerspoon]: https://github.com/Hammerspoon/hammerspoon
 [tmate]: https://tmate.io/
+[codewhisperer]: https://aws.amazon.com/codewhisperer/

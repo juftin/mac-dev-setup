@@ -41,19 +41,6 @@ brew install --cask iterm2
 
 ![iterm2.png](_static/iterm2.png)
 
-### Oh My Zsh
-
-Install [OhMyZsh]
-
-[OhMyZsh] is an open source, community-driven framework for managing your Zsh configuration.
-It comes bundled with thousands of helpful functions, helpers, plugins, themes, and more.
-
-```shell
-sh -c "$(curl -fsSL https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"
-```
-
-![img.png](_static/oh_my_zsh.png)
-
 ## Terminal Customization
 
 ### Hotkey Shortcut
@@ -69,69 +56,121 @@ anywhere: (`^` + `⌥` + `⌘` + `i`)
 
 ![iterm_hotkey.png](_static/iterm_hotkey.png)
 
-### Oh My ZSH Plugins
+### ZSH Plugins
 
-#### zsh-syntax-highlighting
+![_static/powerlevel10k.png](_static/powerlevel10k.png)
 
-Install [zsh-syntax-highlighting]
+#### zinit
 
-```shell
-git clone https://github.com/zsh-users/zsh-syntax-highlighting.git ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-syntax-highlighting
-```
+This guide uses a plugin manager for [zsh] called [zinit]. It is a small set of functions that help
+you easily manage your shell (zsh) plugins.
 
-![img.png](_static/zsh_syntax_highlighting.png)
+With the following snippet on your `~/.zshrc`, `zinit` will automatically bootstrap
+itself with the following plugins (see the [References](references.md) page for
+the full files):
 
-#### zsh-autosuggestions
+-   [OhMyZsh] - The framework for managing your zsh shell
+-   [romkatv/powerlevel10k] - A powerful OhMyZSH theme and prompt
 
-Install [zsh-autosuggestions]
+-   [git] - Git aliases and functions
+-   [dotenv] - Loads environment variables from `.env` for the current directory
+-   [macos] - macOS-specific configuration for zsh
+-   [autojump] - A cd command that learns
+-   [web-search] - Search the web from the terminal
+-   [nvm] -nvm (the Node Version Manager) plugin
+-   [asdf] - asdf (the extendable version manager) plugin
 
-```shell
-git clone https://github.com/zsh-users/zsh-autosuggestions $ZSH_CUSTOM/plugins/zsh-autosuggestions
-```
-
-![img.png](_static/zsh_autosuggestions.png)
-
-#### powerlevel10k
-
-Install [powerlevel10k] OhMyZSH theme
-
-```shell
-git clone --depth=1 https://github.com/romkatv/powerlevel10k.git ${ZSH_CUSTOM:-$HOME/.oh-my-zsh/custom}/themes/powerlevel10k
-```
-
-![powerlevel10k.png](_static/powerlevel10k.png)
-
-### `.zshrc` configuration
-
-The `~/.zshrc` file is the default configuration file for the new [zsh](#zsh) x [OhMyZSH](#oh-my-zsh)
-shell environment.
-
-There is an [example file](dot_files/zshrc.txt) but we will be making changes
-to the `plugins` as well as the `theme` of our zsh environment by updating the
-following lines:
+-   [zsh-users/zsh-syntax-highlighting] - Fish shell-like syntax highlighting for zsh
+-   [zsh-users/zsh-autosuggestions] - Fish-like autosuggestions for zsh
+-   [zsh-users/zsh-completions] - Additional completion definitions for zsh
+-   [zsh-users/zsh-history-substring-search] - Fish shell-like history substring search
 
 ```shell
-ZSH_THEME="powerlevel10k/powerlevel10k"
+##########################################################
+####################### zinit init #######################
+##########################################################
+
+### Added by Zinit's installer
+if [[ ! -f $HOME/.zinit/bin/zinit.zsh ]]; then
+    print -P "%F{33}▓▒░ %F{220}Installing %F{33}DHARMA%F{220} Initiative Plugin Manager (%F{33}zdharma-continuum/zinit%F{220})…%f"
+    command mkdir -p "$HOME/.zinit" && command chmod g-rwX "$HOME/.zinit"
+    command git clone https://github.com/zdharma-continuum/zinit "$HOME/.zinit/bin" && \
+        print -P "%F{33}▓▒░ %F{34}Installation successful.%f%b" || \
+        print -P "%F{160}▓▒░ The clone has failed.%f%b"
+fi
+
+source "$HOME/.zinit/bin/zinit.zsh"
+autoload -Uz _zinit
+(( ${+_comps} )) && _comps[zinit]=_zinit
+
+# Load a few important annexes, without Turbo
+# (this is currently required for annexes)
+zinit light-mode for \
+    zdharma-continuum/z-a-rust \
+    zdharma-continuum/z-a-as-monitor \
+    zdharma-continuum/z-a-patch-dl \
+    zdharma-continuum/z-a-bin-gem-node
+### End of Zinit's installer chunk
+
+##########################################################
+################### zinit - plugins ######################
+##########################################################
+
+setopt promptsubst  # Enable prompt substitution
+
+# oh-my-zsh plugins
+zinit wait lucid for \
+    OMZP::git \
+    OMZP::dotenv \
+    OMZP::asdf \
+    OMZP::autojump \
+    OMZP::web-search \
+    OMZP::nvm
+
+# powerlevel10k - zsh prompt
+zinit ice depth"1"  # git clone depth
+zinit light romkatv/powerlevel10k
+[[ ! -f ${HOME}/.p10k.zsh ]] || source ${HOME}/.p10k.zsh
+
+# third party plugins
+zinit light zsh-users/zsh-syntax-highlighting
+zinit light zsh-users/zsh-autosuggestions
+zinit light zsh-users/zsh-completions
+
+# zsh-history-substring-search
+zinit light zsh-users/zsh-history-substring-search
+bindkey '^[[A' history-substring-search-up
+bindkey '^[[B' history-substring-search-down
+
+##########################################################
+##########################################################
 ```
 
-```shell
-plugins=(
-    git
-    colored-man-pages
-    colorize
-    pip
-    python
-    brew
-    macos
-    zsh-syntax-highlighting
-    zsh-autosuggestions
-)
-```
+> NOTE: **autojump**
+>
+> The `autojump` plugin requires the `autojump` package to be installed via [Homebrew]
+>
+> ```shell
+> brew install autojump
+> ```
+
+Upon opening a new terminal window, you should see the [OhMyZsh] prompt with the
+[romkatv/powerlevel10k] theme. It will guide you through the setup process.
 
 [Xcode]: https://developer.apple.com/xcode/
 [Homebrew]: https://brew.sh/
 [iTerm2]: https://www.iterm2.com/
 [OhMyZsh]: https://github.com/robbyrussell/oh-my-zsh
-[zsh-syntax-highlighting]: https://github.com/zsh-users/zsh-syntax-highlighting
-[zsh-autosuggestions]: https://github.com/zsh-users/zsh-autosuggestions
-[powerlevel10k]: https://github.com/romkatv/powerlevel10k
+[zsh-users/zsh-syntax-highlighting]: https://github.com/zsh-users/zsh-syntax-highlighting
+[zsh-users/zsh-autosuggestions]: https://github.com/zsh-users/zsh-autosuggestions
+[romkatv/powerlevel10k]: https://github.com/romkatv/powerlevel10k
+[git]: https://github.com/ohmyzsh/ohmyzsh/tree/master/plugins/git
+[dotenv]: https://github.com/ohmyzsh/ohmyzsh/tree/master/plugins/dotenv
+[macos]: https://github.com/ohmyzsh/ohmyzsh/tree/master/plugins/macos
+[autojump]: https://github.com/ohmyzsh/ohmyzsh/tree/master/plugins/autojump
+[web-search]: https://github.com/ohmyzsh/ohmyzsh/tree/master/plugins/web-search
+[nvm]: https://github.com/ohmyzsh/ohmyzsh/tree/master/plugins/nvm
+[asdf]: https://github.com/ohmyzsh/ohmyzsh/tree/master/plugins/asdf
+[zinit]: https://github.com/zdharma-continuum/zinit
+[zsh-users/zsh-completions]: https://github.com/zsh-users/zsh-completions
+[zsh-users/zsh-history-substring-search]: https://github.com/zsh-users/zsh-history-substring-search

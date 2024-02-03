@@ -13,16 +13,13 @@ Install [pyenv] with [homebrew]
 brew install pyenv
 ```
 
-Run the following lines to update your dot files, informing them to use [pyenv] to manage Python
+Add the following lines to update your `~/.zshrc` / `~/.zprofile` files,
+instructing them to use [pyenv] to manage Python:
 
 ```shell
-echo 'export PYENV_ROOT="$HOME/.pyenv"' >> ~/.zshrc
-echo '[[ -d $PYENV_ROOT/bin ]] && export PATH="$PYENV_ROOT/bin:$PATH"' >> ~/.zshrc
-echo 'eval "$(pyenv init -)"' >> ~/.zshrc
-echo 'export PYENV_ROOT="$HOME/.pyenv"' >> ~/.zprofile
-echo '[[ -d $PYENV_ROOT/bin ]] && export PATH="$PYENV_ROOT/bin:$PATH"' >> ~/.zprofile
-echo 'eval "$(pyenv init -)"' >> ~/.zprofile
-exec "$SHELL"
+export PYENV_ROOT="$HOME/.pyenv"
+[[ -d $PYENV_ROOT/bin ]] && export PATH="$PYENV_ROOT/bin:$PATH"
+eval "$(pyenv init -)"
 ```
 
 Install additional dependencies required to build Python
@@ -68,6 +65,13 @@ applications.
 ```shell
 brew install pipx
 pipx ensurepath
+```
+
+Add the following lines to update your `~/.zshrc` file, instructing it to use
+`pyenv`'s default Python version to bootstrap `pipx` applications:
+
+```shell
+export PIPX_DEFAULT_PYTHON=$(pyenv which python)
 ```
 
 ![pipx_demo.gif](_static/pipx_demo.gif)
