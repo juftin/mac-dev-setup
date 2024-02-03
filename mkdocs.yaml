@@ -25,7 +25,6 @@ repo_name: mac-dev-setup
 edit_uri: blob/main/docs/
 site_author: juftin
 remote_branch: gh-pages
-copyright: Copyright © 2023 Justin Flannery
 nav:
     - index.md
     - startup.md
@@ -33,6 +32,8 @@ nav:
     - python.md
     - git.md
     - apps.md
+    - silicon.md
+    - aws.md
     - jetbrains.md
     - mac_settings.md
     - productivity.md
@@ -40,6 +41,9 @@ nav:
     - references.md
 extra:
     generator: false
+exclude_docs: |
+    gen_pages.py
+    !dot_files/*
 markdown_extensions:
     - toc:
           permalink: "#"
@@ -65,3 +69,6 @@ markdown_extensions:
           alternate_style: true
 plugins:
     - search
+    - gen-files:
+          scripts:
+              - docs/gen_pages.py
