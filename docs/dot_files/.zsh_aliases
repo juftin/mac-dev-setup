@@ -5,12 +5,8 @@ alias xbrew="arch -x86_64 /usr/local/bin/brew"
 function f() { find . -iname "*$1*" ${@:2} }
 function r() { grep "$1" ${@:2} -R . }
 
-# Create a folder and move into it in one command
+# Create a new directory and enter it
 function mkcd() { mkdir -p "$@" && cd "$_"; }
-
-# Shell Interaction Aliases
-alias c="clear"
-alias ls="ls -G -a -F"
 
 # Source the `.zshrc` file
 function sync() {

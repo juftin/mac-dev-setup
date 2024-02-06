@@ -53,14 +53,9 @@ zinit light romkatv/powerlevel10k
 [[ ! -f ${HOME}/.p10k.zsh ]] || source ${HOME}/.p10k.zsh
 
 # third party plugins
-zinit load zsh-users/zsh-autosuggestions
-zinit load zsh-users/zsh-syntax-highlighting
-zinit load zsh-users/zsh-completions
-
-# zsh-history-substring-search
-zinit light zsh-users/zsh-history-substring-search
-bindkey '^[[A' history-substring-search-up
-bindkey '^[[B' history-substring-search-down
+zinit light zsh-users/zsh-autosuggestions
+zinit light zsh-users/zsh-syntax-highlighting
+zinit light zsh-users/zsh-completions
 
 ##########################################################
 ##########################################################
@@ -69,7 +64,18 @@ bindkey '^[[B' history-substring-search-down
 export EDITOR="nano"
 unsetopt autocd  # disable autocd
 
-# Aliases
+# history search
+autoload -U up-line-or-beginning-search
+autoload -U down-line-or-beginning-search
+zle -N up-line-or-beginning-search
+zle -N down-line-or-beginning-search
+bindkey "^[[A" up-line-or-beginning-search
+bindkey "^[[B" down-line-or-beginning-search
+
+# Shell - Aliases
+alias c="clear"
+alias ls="ls -G -a -F"
+
 [[ ! -f ${HOME}/.zsh_aliases ]] || source ${HOME}/.zsh_aliases
 
 # Environment Variables

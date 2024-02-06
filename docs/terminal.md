@@ -83,7 +83,6 @@ the full files):
 -   [zsh-users/zsh-syntax-highlighting] - Fish shell-like syntax highlighting for zsh
 -   [zsh-users/zsh-autosuggestions] - Fish-like autosuggestions for zsh
 -   [zsh-users/zsh-completions] - Additional completion definitions for zsh
--   [zsh-users/zsh-history-substring-search] - Fish shell-like history substring search
 
 ```shell
 ##########################################################
@@ -123,7 +122,6 @@ zinit wait lucid for \
     OMZP::git \
     OMZP::dotenv \
     OMZP::asdf \
-    OMZP::autojump \
     OMZP::web-search \
     OMZP::nvm
 
@@ -133,22 +131,35 @@ zinit light romkatv/powerlevel10k
 [[ ! -f ${HOME}/.p10k.zsh ]] || source ${HOME}/.p10k.zsh
 
 # third party plugins
-zinit light zsh-users/zsh-syntax-highlighting
 zinit light zsh-users/zsh-autosuggestions
+zinit light zsh-users/zsh-syntax-highlighting
 zinit light zsh-users/zsh-completions
 
-# zsh-history-substring-search
-zinit light zsh-users/zsh-history-substring-search
-bindkey '^[[A' history-substring-search-up
-bindkey '^[[B' history-substring-search-down
+##########################################################
+##########################################################
 
-##########################################################
-##########################################################
+# Shell - Settings
+export EDITOR="nano"
+unsetopt autocd  # disable autocd
+
+# history search
+autoload -U up-line-or-beginning-search
+autoload -U down-line-or-beginning-search
+zle -N up-line-or-beginning-search
+zle -N down-line-or-beginning-search
+bindkey "^[[A" up-line-or-beginning-search
+bindkey "^[[B" down-line-or-beginning-search
+
+# Shell - Aliases
+alias c="clear"
+alias ls="ls -G -a -F"
 ```
 
 > NOTE: **autojump**
 >
-> The `autojump` plugin requires the `autojump` package to be installed via [Homebrew]
+> The `autojump` plugin requires the `autojump` package to be installed via [Homebrew].
+> It's been omitted from this snippet but included on the final `~/.zshrc` file in the
+> [References](references.md) page.
 >
 > ```shell
 > brew install autojump
