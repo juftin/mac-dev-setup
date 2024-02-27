@@ -142,13 +142,39 @@ zinit light zsh-users/zsh-completions
 export EDITOR="nano"
 unsetopt autocd  # disable autocd
 
-# history search
+# Shell - History
+HISTFILE=~/.zsh_history
+HISTSIZE=100000
+SAVEHIST=100000
+
+setopt append_history			# Dont overwrite history
+setopt extended_history			# Also record time and duration of commands.
+setopt share_history			# Share history between multiple shells
+setopt hist_expire_dups_first	# Clear duplicates when trimming internal hist.
+setopt hist_find_no_dups		# Dont display duplicates during searches.
+setopt hist_ignore_dups			# Ignore consecutive duplicates.
+setopt hist_ignore_all_dups		# Remember only one unique copy of the command.
+setopt hist_reduce_blanks		# Remove superfluous blanks.
+setopt hist_save_no_dups		# Omit older commands in favor of newer ones.
+setopt hist_expire_dups_first   # Expire duplicates first when trimming history.
+setopt hist_verify				# Don't execute expanded history commands.
+setopt inc_append_history		# Add commands to the history file immediately.
+
+# Shell - Search
 autoload -U up-line-or-beginning-search
 autoload -U down-line-or-beginning-search
 zle -N up-line-or-beginning-search
 zle -N down-line-or-beginning-search
 bindkey "^[[A" up-line-or-beginning-search
 bindkey "^[[B" down-line-or-beginning-search
+bindkey  "^[[H"   beginning-of-line
+bindkey  "^[[F"   end-of-line
+
+# Shell - Autocomplete
+autoload -Uz compinit
+compinit
+zstyle ':completion:*' menu select
+zstyle ':completion:*' list-colors ''
 
 # Shell - Aliases
 alias c="clear"
