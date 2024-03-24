@@ -72,3 +72,4 @@ plugins:
     - gen-files:
           scripts:
               - docs/gen_pages.py
+    - callouts

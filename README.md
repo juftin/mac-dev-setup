@@ -2,6 +2,12 @@
 
 Development Environment Setup: MacOS
 
+> [!WARNING]
+> This repository has been archived and its contents
+> moved to [juftin/dotfiles](https://github.com/juftin/dotfiles).
+> See the [dotfiles/dev-setup](https://juftin.com/dotfiles/dev-setup)
+> documentation for more information.
+
 <!--skip-->
 
 ## https://juftin.com/mac-dev-setup
